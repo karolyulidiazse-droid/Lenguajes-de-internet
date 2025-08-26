@@ -1,0 +1,75 @@
+.titulo {
+    text-align: center;
+    font-size: 55px;
+}
+
+.espacio {
+  border: none !important;
+  background: transparent;
+  height: 0; 
+  padding: 0;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 5px auto;
+    font-family: Arial, sans-serif;
+}
+
+.elemento {
+    color: rgb(26, 26, 26);
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    cursor: pointer;
+    padding: 4px;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.alcalino { background-color: #6a6767; }
+.alcalino-tierra { background-color: #cc7337; }
+.metal-transicion { background-color: #66f0ff; }
+.metal-pobre { background-color: #cc66b3; }
+.metaloide { background-color: #ff9999; }
+.no-metal { background-color: #fff799; }
+.halogeno { background-color: #66ff69; }
+.gas-noble { background-color: #39a842; }
+.lantanoide { background-color: #d0ffcc; }
+.actinido { background-color: #66ffcc; }
+
+.elemento:hover{
+  transform: scale(1.1);
+  background-color: lightblue;
+  transition: transform 0.2s ease-in-out;
+  z-index: 1; /* hace que quede por encima y no se desajuste */
+  position: relative;
+}
+
+.elemento:focus {
+    transform: scale(0.5.0.5);
+    box-shadow: 0 0 10px rgba(241, 12, 12, 0.3);
+    background-color: lightblue;
+}
+
+.elemento:active {
+    transform: scale(0.95);
+    background-color: #e0dcdc;
+}
+
+
+.elemento .number {
+    font-size: 10px;
+    text-align: left;
+}
+.elemento .symbol {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.elemento .name {
+    font-size: 9px;
+    text-align: left;
+}
