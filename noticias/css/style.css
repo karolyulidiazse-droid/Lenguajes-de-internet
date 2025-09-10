@@ -1,0 +1,245 @@
+/* Reset y tipografía */
+* {
+    box-sizing: border-box;/* incluye padding y borde en el ancho/alto total */
+    margin: 0;
+    padding: 0
+}
+
+
+body {
+    height: 100%;/* altura */
+    font-family: 'Montserrat', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: #f4f6f8;
+    color: #0B2545;
+    line-height: 1.45;
+}
+
+/* Header */
+.site-header {
+    width: 100%;/* ancho */
+    background: #F0C02D;
+    padding: 15px;
+    position:fixed;/* fija el elemento*/
+    top:0px;
+}
+
+.header-inner {
+
+    margin: 0 auto;
+    padding-bottom: 8px;/* espacio inferior */
+}
+
+.site-title {
+    margin-top: 10px;;
+    font-size: 1.9rem;
+    font-style: oblique;
+    font-weight: 900;/* negrita fuerte */
+    color: #0B2545;
+    text-align: center;
+}
+
+.site-title .accent {
+    color:#e6eef8;
+}
+
+.tagline {
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-top: 5px;
+    opacity: 0.7;
+    text-align: center;
+}
+
+
+/* Navegación*/
+.main-nav {
+    display: flex; /* elementos en fila */
+    justify-content: center;
+    gap: 3em; /* espacio entre cada elemento */
+    padding: 10px 0
+}
+
+.main-nav a {
+    color: #0B2545;
+    text-decoration:none;
+    font-weight: 600;
+    padding: 6px 10px;  /* espacio interno del enlace */
+    border-radius: 8px; /* esquinas redondeadas*/
+}
+
+.main-nav a:hover {
+    transform: scale(1.1);
+    background: rgba(11, 37, 69, 0.06);
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1100px; /* ancho máximo de la página */
+    margin: 70px auto;
+}
+
+.intro {
+    margin-top: 200px;/* espacio superior */
+    margin-bottom: 30px;/* espacio inferior */
+}
+
+/* Tabla de noticias */
+.table-wrap {
+    overflow: auto;  /* muestra scroll si el contenido es grande */
+    margin-bottom: 22px
+}
+
+.news-table {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(11, 37, 69, 0.08);/*sombra ligera*/
+}
+
+.news-table td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #eef2f6;
+}
+
+.news-table thead th {
+    background: linear-gradient(90deg, rgba(11, 37, 69, 0.03), rgba(11, 37, 69, 0.02));
+    font-weight: 600;
+}
+
+.news-table tbody tr:hover {
+    background: linear-gradient(90deg, rgba(255, 221, 87, 0.10), rgba(240, 192, 45, 0.04));
+    transform: translateY(-1px); /* levanta ligeramente la fila */
+}
+
+/* Tarjetas - container usa grid */
+.cards-wrap {
+    display: grid; /* usa cuadrícula */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));/* columnas flexibles */
+    gap: 18px; /* espacio entre tarjetas */
+}
+
+.card {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(11, 37, 69, 0.08);
+    transition: scale(1.1);
+
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;/* recorta la imagen sin deformarla */
+}
+
+.card-content {
+    padding: 10px
+}
+
+.card h4 {
+    margin-bottom: 5px
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #334155
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 14px 40px rgba(11, 37, 69, 0.12)
+}
+
+/* Footer full width */
+.site-footer {
+    width: 100%;
+    background: #0B2545;
+    color: white;
+    padding: 18px 16px;
+    margin-top: 26px
+}
+
+.footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+}
+
+.site-footer a {
+    color: #FFDD57;
+    font-weight: 600;
+}
+
+/* display y position */
+
+.demo-section {
+    background: white;
+    border-radius: 10px;
+    padding: 14px;
+    margin-top: 20px;
+    box-shadow: 0 6px 18px rgba(11, 37, 69, 0.08);
+}
+
+.demo-section h3 {
+    margin-bottom: 8px
+}
+
+.demo-section .small {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
+
+/* cajas base usadas en la demo */
+.box {
+    display: inline-block; 
+    padding: 8px 10px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #FFDD57, #F0C02D);
+    color: #0B2545;
+    font-weight: 600;
+    margin: 6px 6px;
+}
+
+/* Display examples */
+.display-row {
+    background: #fbfbfc;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.d-block {
+    display: block;
+    width: 100%;
+}
+
+.d-inline {
+    display: inline;
+    padding: 6px 8px;
+    border-radius: 6px;
+}
+
+.d-inline-block {
+    display: inline-block;
+    width: 180px;
+}
+
+.pos-container {
+    position: relative;
+    border: 2px dashed #e6eef8;
+    border-radius: 8px;
+    padding: 12px;
+    height: 180px;
+    overflow: auto;
+    background: #ffffff;
+    margin-top: 12px
+    
+}
+
